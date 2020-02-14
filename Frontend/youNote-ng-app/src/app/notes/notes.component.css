@@ -16,3 +16,16 @@
     font-size: large;
     font-weight: bold;
 }
+.input-label-note{
+    background:rgb(245,195,68);
+    border: none;
+    cursor: pointer;
+}
+
+.input-label-lg-note{
+    background:rgb(245,195,68);
+    border:none;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}

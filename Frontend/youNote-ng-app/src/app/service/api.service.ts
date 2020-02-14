@@ -29,6 +29,10 @@ export class ApiService {
       public updateNote(noteId: number ,note: Note): Observable<Note>{
         return this.http.put<Note>(baseUrl + 'notes' +'/' +noteId, note);
       }
+      public deleteNote(id: number): Observable<any>{
+        return this.http.delete<void>(baseUrl + 'notes' +'/'+id)
+        
+      }
 public getAllNotebooks() : Observable<Notebook[]>{
 return this.http.get<Notebook[]>(baseUrl + 'notebooks');
 }
