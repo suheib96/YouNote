@@ -24,7 +24,7 @@ public class Note {
 	private Long id;
 	
 	@NotNull
-	@Size(min=3)
+	@Size(min=1)
 	private String title;
 	
 	@NotNull
