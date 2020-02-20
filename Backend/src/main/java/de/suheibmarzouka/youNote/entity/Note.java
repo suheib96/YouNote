@@ -1,6 +1,7 @@
 package de.suheibmarzouka.youNote.entity;
 
-import java.sql.Date;
+
+import java.util.Calendar;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,8 @@ import lombok.Setter;
 @Setter
 public class Note {
 	
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -30,7 +33,7 @@ public class Note {
 	@NotNull
 	private String text;
 	
-	private Date lastModifiedOn;
+	java.sql.Timestamp lastModifiedOn = new java.sql.Timestamp(Calendar.getInstance().getTime().getTime());
 	
 	
 	

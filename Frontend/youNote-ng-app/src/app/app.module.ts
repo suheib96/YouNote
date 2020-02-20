@@ -9,6 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule} from "@angular/common/http";
+import { NoteComponent } from './note/note.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { HttpClientModule} from "@angular/common/http";
     NotesComponent,
     NotFoundComponent,
     FeedbackComponent,
+    NoteComponent,
   ],
   imports: [
     BrowserModule,

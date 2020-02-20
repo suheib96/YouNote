@@ -13,7 +13,7 @@ export class NotesComponent implements OnInit {
   
   notebooks: Notebook[] = [];
   notes: Note[] = [];
-  note: Note;
+  
   selectedNotebook: Notebook;
   constructor(private apiService: ApiService) { }
   
