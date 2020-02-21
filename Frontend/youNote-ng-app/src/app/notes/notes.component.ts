@@ -15,6 +15,7 @@ export class NotesComponent implements OnInit {
   notes: Note[] = [];
   
   selectedNotebook: Notebook;
+  searchText: string =null;
   constructor(private apiService: ApiService) { }
   
   ngOnInit() {
@@ -75,12 +76,13 @@ export class NotesComponent implements OnInit {
     );
 }
 deleteNotebook(notebook:Notebook){
-  if(confirm("Are you sure you want to delete the notebook?")){
+  if(confirm("Are you sure you want to delete the notebook with all notes?")){
     this.apiService.deleteNotebook(notebook.id).subscribe(()=> {
+      this.selectAllNotes();
       let indexOfNotebook = this.notebooks.indexOf(notebook);
-      this.notebooks.splice(indexOfNotebook, 1)
+      this.notebooks.splice(indexOfNotebook, 1);
     },
-    err => {alert("An error has occurred while deleting the notebook");}
+    err => {alert("An error has occurred while deleting the notebook. ");}
     );
 
   }
@@ -100,6 +102,7 @@ createNote(){
 id:null,
 title: "New Title",
 text:"Write some text in here",
+lastModifiedOn: new Date,
 
 notebook:{
   id: this.selectedNotebook.id

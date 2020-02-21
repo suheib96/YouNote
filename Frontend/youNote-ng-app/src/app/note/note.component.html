@@ -2,7 +2,7 @@
     <div class="card-body" style="padding: 8px; margin-top: 8px;">
       <div>
         <!-- title -->
-        <input type="text"
+        <input onClick="this.setSelectionRange(0, this.value.length)"type="text"
         [(ngModel)]="note.title"
         (change)="updateNote()"
                class="input-label-lg-note"
@@ -12,7 +12,7 @@
         </a>
       </div>
       <!-- text -->
-      <textarea class="input-label-note"
+      <textarea onClick="this.setSelectionRange(0, this.value.length)"class="input-label-note"
                 style="width: 100%" rows="6" [(ngModel)]="note.text"
                 (change)="updateNote()"></textarea>
       <div class="text-info" style="fontsize: small">

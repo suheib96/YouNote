@@ -6,7 +6,7 @@ id:number;
 title: string;
 text:string;
 notebook: Notebook;
-lastModifiedOn?:string;
+lastModifiedOn?:Date;
 
 
    
